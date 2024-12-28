@@ -1,5 +1,5 @@
 """
-Week 1
+Week 1 Homework
 """
 
 # Question 1: Write a Python code that prints numbers from 1 to 10 on the screen.
@@ -82,9 +82,10 @@ Week 1
 # print(digit_number)
 
 """---------------------------------------------------"""
-# Question 8: Write a Python code that takes a word from the user and prints the reverse of this word on the screen.
+# # Question 8: Write a Python code that takes a word from the user and prints the reverse of this word on the screen.
 
 # user_string = input("Please enter a word: ")
+# # Variable to create the reverse of the string
 # reserve_string = ""
 # for i in user_string:
 #     reserve_string = i + reserve_string
@@ -136,23 +137,26 @@ Week 1
 # print("The largest number you enter:",largest_number)
 
 """---------------------------------------------------"""
-# Question 12: Get Midterm and Final grades from a student for any course. The sum of 40% of the midterm exam grade and 60% of the final grade will give the year-end average.
-# If the average is below 50, "FAILED" will appear on the screen, and if it is 50 or above, "SUCCESSFUL" will be displayed on the screen.
-# This printing process is 4 lessons. and the lessons will be written one after the other.
+# # Question 12: Get Midterm and Final grades from a student for any course. The sum of 40% of the midterm exam grade and 60% of the final grade will give the year-end average.
+# # If the average is below 50, "FAILED" will appear on the screen, and if it is 50 or above, "SUCCESSFUL" will be displayed on the screen.
+# # This printing process is 4 lessons. and the lessons will be written one after the other.
 
-# courses = list()
-# for i in range(4):
-#     course ={}
-#     course["id"] = i+1
-#     course["name"] = input("Please enter course name: ")
-#     course["midterm"]= int(input("Please enter midterm exame grade: "))
-#     course["final"] = int(input("Please enter final exame grade: "))
-#     course["average"] = ((course["midterm"] * 0.4) + (course["final"] * 0.6))
-#     if course["average"] < 50:
-#         course["result"]="FAILED"
-#     else:
-#         course["result"] = "SUCCESSFUL"
-#     courses.append(course)
-#
-# for i in courses:
-#     print(f"Student in {i["name"]} course: ",i["result"],"  Avarage:",i["average"])
+# List where courses information will be kept
+courses = list()
+for i in range(4):
+    course ={}
+    course["id"] = i+1
+    course["name"] = input("Please enter course name: ")
+    course["midterm"]= int(input("Please enter midterm exame grade: "))
+    course["final"] = int(input("Please enter final exame grade: "))
+    course["average"] = ((course["midterm"] * 0.4) + (course["final"] * 0.6))
+    if course["average"] < 50:
+        course["result"]="FAILED"
+    else:
+        course["result"] = "SUCCESSFUL"
+    courses.append(course)
+
+for i in courses:
+    print(f"Student in {i["name"]} course: ",i["result"],"  Avarage:",i["average"])
+
+print(courses)
