@@ -46,19 +46,3 @@
 #     ortalama = f"{(not_toplam/len(student_marks[query_name])):.2f}"
 #     print(ortalama)
 """---------------------------------------------------"""
-regex_integer_in_range = r"_________"  # Do not delete 'r'.
-regex_alternating_repetitive_digit_pair = r"_________"  # Do not delete 'r'.
-
-import re
-
-P = input()
-
-print(bool(re.match(regex_integer_in_range, P))
-      and len(re.findall(regex_alternating_repetitive_digit_pair, P)) < 2)
-
-number_examined_list = list()
-for i in range(len(regex_alternating_repetitive_digit_pair) - 2):
-    if (regex_alternating_repetitive_digit_pair[i] == regex_alternating_repetitive_digit_pair[i + 2] and
-            regex_alternating_repetitive_digit_pair[i] != regex_alternating_repetitive_digit_pair[i + 1]):
-        number_examined_list.append[regex_alternating_repetitive_digit_pair[i]]
-print(len(number_examined_list) > 0)
